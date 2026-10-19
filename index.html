@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/icone vince.ico" type="image/x-icon">
+    <title>Catálogo</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho Fixo -->
+    <header class="cabecalho">
+        <div class="navegacao">
+            <div class="logo">
+                <img src="Imagens/Logo vince redimensionada.png" alt="Logo Vince" class="logoVince"
+                    onerror="this.style.display='none'">
+                <span>VINCE</span>
+            </div>
+            <button class="botao-menu" aria-label="Abrir Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <ul class="menu">
+                <li><a href="#" class="menu-link ativo">Início</a></li>
+                <li><a href="#" class="menu-link">Produtos</a></li>
+                <li><a href="#" class="menu-link">Moda Praia</a></li>
+                <li><a href="#" class="menu-link">Lingerie</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Banner Principal / Hero -->
+    <section class="hero-banner">
+        <div class="hero-conteudo">
+            <h1>Encontre seu look</h1>
+            <p>Produtos de alta qualidade desenvolvidos diretamente pela nossa fábrica. Confira o nosso catálogo
+                exclusivo!</p>
+            <a href="#catalogo-container" class="botao-cta">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Container do Catálogo Dinâmico -->
+    <main id="catalogo-container" class="catalogo-wrapper"></main>
+
+    <!-- Modal de Visualização Ampliada (Zoom) -->
+    <div id="imageModal" class="modal">
+        <button id="closeBtn" class="close-btn" aria-label="Fechar">&times;</button>
+
+        <div class="zoom-controls">
+            <button id="zoomOut" title="Diminuir Zoom">−</button>
+            <span id="zoomIndicator">1x</span>
+            <button id="zoomIn" title="Aumentar Zoom">+</button>
+        </div>
+
+        <button id="prevBtn" class="nav-btn prev" aria-label="Anterior">&#10094;</button>
+
+        <div class="zoom-container">
+            <img id="imgExpanded" src="" alt="Imagem Ampliada" class="modal-content">
+        </div>
+
+        <button id="nextBtn" class="nav-btn next" aria-label="Próximo">&#10095;</button>
+
+        <h2 id="productTitle">Nome do Produto</h2>
+        <!-- NOVO ELEMENTO ADICIONADO ABAIXO: -->
+        <p id="productPriceModal">R$ 0,00</p>
+    </div>
+
+    <!-- Rodapé Profissional -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-secao">
+                <h3>Atendimento</h3>
+                <p>Segunda a Sexta: 09h às 11h / 12h30 às 18h</p>
+                <p>Sábado: 09h às 14h</p>
+            </div>
+            <div class="rodape-secao">
+                <h3>Siga-nos</h3>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com/vincemodaintimaepraia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/vincemodaintima" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.tiktok.com/@vince.moda.intma" target="_blank" rel="noopener noreferrer">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="rodape-direitos">
+            <p>&copy; 2026 Vince. Todos os direitos reservados. Direto da Fábrica.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

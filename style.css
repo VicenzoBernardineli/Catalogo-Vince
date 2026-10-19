@@ -1,0 +1,1099 @@
+:root {
+    --cor-primaria: #E29A9A;
+    /* Rosa Quartz Acetinado (Sofisticado) */
+    --cor-primaria-dark: #C67D7D;
+    /* Tom mais profundo para Hovers/Destaques */
+    --cor-fundo-suave: #FCEFEF;
+    /* Rosa Balé Suave para fundos e banners */
+    --cor-fundo-geral: #FDFDFD;
+    /* Off-white de fundo para limpeza visual */
+    --cor-card: #FFFFFF;
+    --cor-texto-escuro: #1A1A1A;
+    /* Grafite Puro para legibilidade máxima */
+    --cor-texto-suave: #555555;
+    /* Cinza neutro para informações secundárias */
+    --cor-borda: #F2E5E5;
+    /* Borda sutil levemente rosada */
+    --sombra-suave: 0 4px 20px rgba(226, 154, 154, 0.04);
+    --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.02);
+    --transicao: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo-geral);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Cabeçalho Fixo Minimalista
+   ========================================================================== */
+.cabecalho {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0px var(--cor-borda);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 18px 0;
+    transition: var(--transicao);
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--cor-texto-escuro);
+}
+
+.logoVince {
+    height: 32px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--cor-texto-suave);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transicao);
+    position: relative;
+    padding: 4px 0;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--cor-texto-escuro);
+}
+
+.menu a.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    border-radius: 2px;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    color: var(--cor-texto-escuro);
+    cursor: pointer;
+    display: none;
+}
+
+/* ==========================================================================
+   Seção Hero / Banner de Apresentação
+   ========================================================================== */
+.hero-banner {
+    padding-top: 160px;
+    padding-bottom: 90px;
+    background-color: var(--cor-fundo-suave);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.hero-conteudo h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.hero-conteudo p {
+    font-size: 1.05rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 30px;
+}
+
+.botao-cta {
+    display: inline-block;
+    background-color: var(--cor-texto-escuro);
+    color: #FFF;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: var(--transicao);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.botao-cta:hover {
+    background-color: var(--cor-primaria-dark);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Grid e Container do Catálogo
+   ========================================================================== */
+.catalogo-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+}
+
+.categoria-bloco {
+    margin-bottom: 60px;
+}
+
+.categoria-titulo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ==========================================================================
+   Card de Produto Moderno
+   ========================================================================== */
+.produto-card {
+    background-color: var(--cor-card);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: left;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(226, 154, 154, 0.1);
+    border-color: var(--cor-primaria);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    background-color: var(--cor-fundo-suave);
+    transition: var(--transicao);
+}
+
+.produto-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    text-transform: capitalize;
+}
+
+/* Animação de Fade In */
+.fade-in-animacao {
+    animation: transicaoSuave 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes transicaoSuave {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   CSS DO MODAL DE ZOOM - REVISADO E ESTILIZADO (PC E CELULAR)
+   ========================================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* Garante que fica por cima de absolutamente tudo */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    /* Fundo branco elegante e minimalista */
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Container que segura a foto e esconde as bordas no zoom */
+.zoom-container {
+    width: 85vw;
+    max-width: 480px;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-in;
+    touch-action: none;
+    background-color: transparent;
+    /* CORREÇÃO: Remove o fundo branco para a borda sumir */
+    box-shadow: none;
+    /* Remove a sombra rígida que denunciava o formato do bloco */
+    border: none;
+    /* Remove a borda sutil antiga */
+}
+
+/* A foto expandida propriamente dita */
+.modal-content {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* VOLTOU PARA CONTAIN: Garante que a foto NUNCA seja cortada */
+    will-change: transform, transform-origin;
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Adiciona uma sombra suave contornando apenas o formato real da sua foto */
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.05));
+}
+
+/* Painel de Controles Superior (+ / 1x / -) */
+.zoom-controls {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #FFFFFF;
+    padding: 6px 20px;
+    border-radius: 40px;
+    z-index: 1015;
+    box-shadow: 0 4px 25px rgba(226, 154, 154, 0.2);
+    border: 1px solid var(--cor-borda);
+}
+
+.zoom-controls button {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto-escuro);
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao);
+    border-radius: 50%;
+}
+
+.zoom-controls button:hover {
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-primaria-dark);
+}
+
+.zoom-controls span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--cor-primaria-dark);
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Botão de Fechar do Modal (X) */
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: var(--cor-texto-escuro);
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1020;
+    transition: var(--transicao);
+    line-height: 1;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: var(--cor-primaria-dark);
+}
+
+/* Setas Laterais de Navegação (Apenas para Computador) */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    color: var(--cor-texto-escuro);
+    border: 1px solid var(--cor-borda);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transicao);
+    z-index: 1010;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.nav-btn:hover {
+    background: var(--cor-texto-escuro);
+    color: #FFFFFF;
+    border-color: var(--cor-texto-escuro);
+}
+
+.prev {
+    left: 40px;
+}
+
+.next {
+    right: 40px;
+}
+
+/* Textos informativos abaixo da foto no modal */
+#productTitle {
+    color: var(--cor-texto-escuro);
+    margin-top: 25px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: 1010;
+    letter-spacing: -0.2px;
+}
+
+#productPriceModal {
+    color: var(--cor-primaria-dark);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 6px;
+    text-align: center;
+    z-index: 1010;
+}
+
+/* Ajustes finos para que o modal fique perfeito e sem quebras no Celular */
+@media (max-width: 768px) {
+    .zoom-container {
+        width: 90vw;
+        height: 50vh;
+        /* Reduz ligeiramente a altura para sobrar espaço para os botões no celular */
+    }
+
+    .nav-btn {
+        display: none;
+        /* Remove as setas no mobile para dar foco total ao arrastar com o dedo */
+    }
+
+    .close-btn {
+        right: 25px;
+        top: 25px;
+        font-size: 2.2rem;
+    }
+
+    .zoom-controls {
+        top: auto;
+        bottom: 30px;
+        /* Joga os botões de zoom para baixo no celular, facilitando o clique com o polegar */
+    }
+
+    #productTitle {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+
+    #productPriceModal {
+        font-size: 1.05rem;
+    }
+}
+
+/* ==========================================================================
+   Rodapé Institucional
+   ========================================================================== */
+.rodape {
+    background-color: #111111;
+    color: #FFF;
+    padding: 60px 5% 30px 5%;
+    margin-top: 40px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #222222;
+}
+
+.rodape-secao h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+}
+
+.rodape-secao p {
+    color: #999999;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais a {
+    color: #999999;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+}
+
+.redes-sociais a:hover {
+    color: var(--cor-primaria);
+}
+
+.rodape-direitos {
+    text-align: center;
+    padding-top: 30px;
+    color: #555555;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+Mídia Queries Avançadas para Celulares e Tablets========================================================================== */
+@media (max-width: 768px) {
+    .botao-menu {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FFF;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .menu.ativo {
+        max-height: 250px;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 16px 5%;
+        border-bottom: 1px solid #FAF6F6;
+    }
+
+    .menu a.ativo::after {
+        display: none;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2.1rem;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    /* Oculta setas laterais para privilegiar o swipe/gesto */
+    .close-btn {
+        right: 20px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-wrapper {
+        padding: 40px 4%;
+    }
+
+    .categoria-titulo {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    /* Sistema Dinâmico de 2 colunas no Celular */
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .produto-card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .produto-card img {
+        height: 190px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+
+    .produto-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Estilo do Preço nos Cards */
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-top: 6px;
+    letter-spacing: -0.2px;
+}
+
+/* Ajuste sutil para o nome do produto não colar no preço */
+.produto-card h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cor-texto-suave);
+    text-transform: capitalize;
+}
+
+/* Estilo do Preço Dentro do Modal Aberto */
+#productPriceModal {
+    color: var(--cor-primaria-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 4px;
+    z-index: 1010;
+}
+
+/* ==========================================================================
+   Efeito de Carregamento (Skeleton Screen) e Badges Visuais
+   ========================================================================== */
+
+/* Container relativo para gerenciar posições absolutas internas */
+.img-container-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+/* O esqueleto começa com a animação de pulsação ligada */
+.img-skeleton {
+    width: 100%;
+    background: linear-gradient(90deg, #F0F0F0 25%, #F7F7F7 50%, #F0F0F0 75%);
+    background-size: 200% 100%;
+    animation: skeletonPulse 1.5s infinite linear;
+}
+
+/* Tamanhos de altura simulados baseados no layout responsivo padrão */
+@media (min-width: 481px) {
+    .img-skeleton {
+        height: 340px;
+    }
+
+    .produto-card img {
+        height: 340px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-skeleton {
+        height: 190px;
+    }
+
+    .produto-card img {
+        height: 190px;
+    }
+}
+
+/* A foto real começa invisível e aparece de forma fluida */
+.product-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    opacity: 1; /* Mudado de 0 para 1 para a imagem aparecer */
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Quando o JS avisa que a imagem terminou de carregar, removemos o skeleton */
+.img-skeleton.loaded {
+    background: transparent;
+    animation: none;
+}
+
+.img-skeleton.loaded .product-img {
+    opacity: 1;
+}
+
+@keyframes skeletonPulse {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Estilo Base dos Badges de Produto */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    pointer-events: none;
+    /* Garante que o clique passe direto para o card */
+}
+
+/* Cores específicas de cada etiqueta baseadas na paleta moderna */
+.badge-lancamento {
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+}
+
+.badge-destaque {
+    background-color: var(--cor-texto-escuro);
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   [SEGURANÇA] Proteções Visuais e Marcas d'Água Dinâmicas
+   ========================================================================== */
+
+/* 1. Bloqueia seleção de textos e preços em toda a página do catálogo */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 2. Camada sobre os cards: Cria um padrão repetido da marca por cima da foto */
+.camada-protecao-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    /* Fica exatamente acima da tag img, mas abaixo do badge */
+    pointer-events: none;
+    /* Permite que o clique passe para o card abrir o modal */
+
+    /* CONFIGURAÇÃO DA MARCA D'ÁGUA REPETIDA */
+    /* Substitua pelo caminho da sua logo (pode ser .png transparente ou .svg) */
+    background-image: url('logoVince.png');
+    background-size: 60px 60px;
+    /* Tamanho de cada logo repetida */
+    opacity: 0.12;
+    /* Bem suave e transparente para não atrapalhar a visão do cliente */
+}
+
+/* 3. Desativa o menu suspenso de salvar imagem por clique longo no celular */
+.product-img {
+    -webkit-touch-callout: none;
+}
+
+/* 4. Mantém a proteção rígida de clique apenas na foto expandida do Modal de Zoom */
+.modal-content {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+}
+
+
+/* Cria uma escrita "VINCE" gigante, inclinada e semitransparente no centro do zoom */
+.zoom-container::before {
+    content: 'VINCE';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* Centralizado e inclinado */
+    font-size: 4rem;
+    /* Tamanho grande ocupando o centro */
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: rgba(0, 0, 0, 0.08);
+    /* Cor preta com apenas 8% de opacidade (muito discreta) */
+    z-index: 1006;
+    /* Fica por cima da foto expandida, mas abaixo dos botões do modal */
+    pointer-events: none;
+    /* Não atrapalha os gestos de arrastar do zoom */
+}
+
+/* ==========================================================================
+   Estilização do Sistema "Carregar Mais"
+   ========================================================================== */
+.container-botao-carregar {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.botao-carregar-mais-estilo {
+    background-color: transparent;
+    color: var(--cor-texto-escuro);
+    border: 2px solid var(--cor-texto-escuro);
+    padding: 14px 40px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: var(--transicao);
+}
+
+.botao-carregar-mais-estilo:hover {
+    background-color: var(--cor-texto-escuro);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.botao-carregar-mais-estilo:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   Novas Funcionalidades: Contador, Efeito Fade-In e Voltar ao Topo
+   ========================================================================== */
+
+/* 1. Estilização do Contador de Produtos */
+.contador-produtos-estilo {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--cor-texto-suave);
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+/* 2. Botão Flutuante Voltar ao Topo */
+#btn-voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: var(--cor-texto-escuro);
+    color: #FFFFFF;
+    border: 1px solid var(--cor-borda);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+}
+
+/* Estado ativo do botão ao rolar a página */
+#btn-voltar-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+#btn-voltar-topo:hover {
+    background-color: var(--cor-primaria-dark);
+    transform: translateY(-4px);
+}
+
+/* 3. Efeito Animação Fade-In para Novos Itens Injetados */
+.fade-in-novo-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: surgimentoSuaveProdutos 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes surgimentoSuaveProdutos {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste responsivo do botão voltar ao topo em celulares */
+@media (max-width: 480px) {
+    #btn-voltar-topo {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   Setas de Navegação Interna dos Cards de Produtos (Variantes)
+   ========================================================================== */
+.img-container-card {
+    position: relative;
+    /* Essencial para as setas se posicionarem corretamente */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+
+.card-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-escuro);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 6;
+    /* Fica acima da imagem e da camada protetora */
+    font-size: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transicao);
+    opacity: 0;
+    /* Invisível por padrão no Desktop */
+}
+
+/* Exibe as setas suavemente ao passar o mouse sobre o Card */
+.produto-card:hover .card-nav-btn {
+    opacity: 1;
+}
+
+.card-nav-btn:hover {
+    background: var(--cor-texto-escuro);
+    color: #FFFFFF;
+    border-color: var(--cor-texto-escuro);
+}
+
+.card-prev-btn {
+    left: 8px;
+}
+
+.card-next-btn {
+    right: 8px;
+}
+
+.produto-info-bloco {
+    margin-top: auto;
+    /* Alinha as informações sempre na base do card */
+}
+
+/* Garante visibilidade das setas direto em telas touch/mobile */
+@media (max-width: 768px) {
+    .card-nav-btn {
+        opacity: 1;
+        width: 28px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .card-prev-btn {
+        left: 4px;
+    }
+
+    .card-next-btn {
+        right: 4px;
+    }
+}
+
+.container-seletores-atributos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.seletor-atributo-bloco {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.product-attribute-text {
+    font-size: 0.8rem;
+    color: #666666;
+    margin-top: 4px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.product-colors-list {
+    margin-top: 8px;
+    /* Dá um leve respiro abaixo do preço */
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO MELHORADA COM ROSA QUARTZ NO BOTÃO ATIVO
+   ========================================================================== */
+.product-colors-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.product-attribute-label {
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+    font-weight: 600;
+    margin-right: 2px;
+}
+
+.btn-tag-cor {
+    background: #FFFFFF;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-escuro);
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.btn-tag-cor:hover {
+    background: var(--cor-fundo-suave);
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria-dark);
+}
+
+/* NOVO: Estética do botão ativo com a identidade visual Rosa Quartz da Vince */
+.btn-tag-cor.ativo {
+    background: var(--cor-primaria);
+    color: #FFFFFF;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 4px 12px rgba(226, 154, 154, 0.3);
+    font-weight: 600;
+}
+
+.card-nav-btn {
+    z-index: 10 !important;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE TRANSIÇÃO SUAVE AO TROCAR FOTOS NO CARD
+   ========================================================================== */
+.product-img {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Quando a foto recebe essa classe pelo JS, ela ganha suavidade e estabiliza */
+.product-img.foto-ativa {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ==========================================================================
+   ESTILO DA TAG DE COR EXCLUSIVA DENTRO DO MODAL DE ZOOM
+   ========================================================================== */
+.modal-product-color-badge {
+    background-color: var(--cor-fundo-suave); /* Fundo rosa balé suave */
+    color: var(--cor-primaria-dark); /* Texto rosa profundo */
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 50px; /* Formato pílula elegante */
+    margin-top: 10px;
+    margin-bottom: 2px;
+    display: inline-block;
+    text-align: center;
+    z-index: 1010;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    box-shadow: 0 2px 8px rgba(226, 154, 154, 0.1);
+}
