@@ -683,7 +683,8 @@ Mídia Queries Avançadas para Celulares e Tablets==============================
     width: 100%;
     height: 340px;
     object-fit: cover;
-    opacity: 1; /* Mudado de 0 para 1 para a imagem aparecer */
+    opacity: 1;
+    /* Mudado de 0 para 1 para a imagem aparecer */
     transition: opacity 0.4s ease-in-out;
 }
 
@@ -1082,12 +1083,15 @@ body {
    ESTILO DA TAG DE COR EXCLUSIVA DENTRO DO MODAL DE ZOOM
    ========================================================================== */
 .modal-product-color-badge {
-    background-color: var(--cor-fundo-suave); /* Fundo rosa balé suave */
-    color: var(--cor-primaria-dark); /* Texto rosa profundo */
+    background-color: var(--cor-fundo-suave);
+    /* Fundo rosa balé suave */
+    color: var(--cor-primaria-dark);
+    /* Texto rosa profundo */
     font-size: 0.85rem;
     font-weight: 600;
     padding: 6px 16px;
-    border-radius: 50px; /* Formato pílula elegante */
+    border-radius: 50px;
+    /* Formato pílula elegante */
     margin-top: 10px;
     margin-bottom: 2px;
     display: inline-block;
@@ -1096,4 +1100,97 @@ body {
     letter-spacing: 0.5px;
     text-transform: capitalize;
     box-shadow: 0 2px 8px rgba(226, 154, 154, 0.1);
+}
+
+/* ==========================================================================
+   Submenu Dropdown (Novas Subcategorias)
+   ========================================================================== */
+.menu li {
+    position: relative;
+}
+
+/* Esconde o submenu por padrão no Desktop */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #FFFFFF;
+    min-width: 160px;
+    list-style: none;
+    box-shadow: 0 10px 30px rgba(226, 154, 154, 0.15);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 110;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.8rem !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.5px;
+    color: var(--cor-texto-suave) !important;
+    width: 100%;
+    text-align: left;
+    transition: var(--transicao);
+}
+
+.submenu li a:hover,
+.submenu li a.ativo {
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-primaria-dark) !important;
+}
+
+/* Remove a linha de seleção padrão do link pai caso o submenu esteja ativo */
+.submenu a.ativo::after {
+    display: none !important;
+}
+
+/* Exibe ao passar o mouse no Desktop */
+@media (min-width: 769px) {
+    .dropdown:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Adaptação Responsiva completa para Celulares (Touch) */
+@media (max-width: 768px) {
+    .menu.ativo {
+        max-height: 450px;
+        /* Aumentado para comportar a abertura dos itens */
+        overflow-y: auto;
+    }
+
+    .submenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none !important;
+        box-shadow: none;
+        border: none;
+        background-color: #FFFBFB;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.3s ease-out;
+    }
+
+    /* Quando a categoria pai for clicada no mobile */
+    .dropdown.aberto .submenu {
+        max-height: 200px;
+    }
+
+    .submenu li a {
+        padding: 12px 10% !important;
+        border-bottom: 1px solid #FAF6F6;
+    }
 }

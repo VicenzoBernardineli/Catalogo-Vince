@@ -29,10 +29,18 @@
                 </svg>
             </button>
             <ul class="menu">
-                <li><a href="#" class="menu-link ativo">Início</a></li>
-                <li><a href="#" class="menu-link">Produtos</a></li>
-                <li><a href="#" class="menu-link">Moda Praia</a></li>
-                <li><a href="#" class="menu-link">Lingerie</a></li>
+                <li><a href="#" class="ativo">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Moda Praia</a>
+                    <ul class="submenu">
+                        <li><a href="#" data-pai="Moda Praia" data-sub="biquíni">Biquínis</a></li>
+                        <li><a href="#" data-pai="Moda Praia" data-sub="calça">Calças</a></li>
+                        <li><a href="#" data-pai="Moda Praia" data-sub="saída">Saídas</a></li>
+                        <li><a href="#" data-pai="Moda Praia" data-sub="maio">Maiôs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lingerie</a></li>
             </ul>
         </div>
     </header>
@@ -84,9 +92,12 @@
             <div class="rodape-secao">
                 <h3>Siga-nos</h3>
                 <div class="redes-sociais">
-                    <a href="https://www.instagram.com/vincemodaintimaepraia/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.facebook.com/vincemodaintima" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a href="https://www.tiktok.com/@vince.moda.intma" target="_blank" rel="noopener noreferrer">TikTok</a>
+                    <a href="https://www.instagram.com/vincemodaintimaepraia/" target="_blank"
+                        rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/vincemodaintima" target="_blank"
+                        rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.tiktok.com/@vince.moda.intma" target="_blank"
+                        rel="noopener noreferrer">TikTok</a>
                 </div>
             </div>
         </div>

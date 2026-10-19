@@ -146,7 +146,7 @@
             botao.addEventListener("click", () => {
                 const quantidadeAnterior = produtosExibidosQuantidade;
                 produtosExibidosQuantidade += 8;
-                renderizarCatalogo(categoriaAtualAtiva, quantidadeAnterior);
+                renderizarCatalogo(categoriaAtualAtiva, quantidadeAnterior, subcategoriaAtualAtiva);
             });
 
             btnContainer.appendChild(botao);
@@ -195,13 +195,43 @@
         /* ==========================================================================
            5. RENDERIZAÇÃO OTIMIZADA (FIM DOS LOOPS ANINHADOS E INSERÇÃO ÚNICA)
            ========================================================================== */
-        function renderizarCatalogo(categoriaFiltro = "todos", quantidadeAnterior = 0) {
+        /* ==========================================================================
+           MODIFICADO: Suporte a Categorias e Subcategorias com Paginação Integrada
+           ========================================================================== */
+        let subcategoriaAtualAtiva = "todas";
+
+        function renderizarCatalogo(categoriaFiltro = "todos", quantidadeAnterior = 0, subcategoriaFiltro = "todas") {
             if (!container) return;
             container.innerHTML = "";
             categoriaAtualAtiva = categoriaFiltro;
+            subcategoriaAtualAtiva = subcategoriaFiltro;
 
-            if (categoriaFiltro !== "todos") {
-                produtosFiltrados = produtosAgrupados.filter(p => p.categoria === categoriaFiltro);
+            // Filtragem inteligente por categoria Pai e Subcategoria (via nome base ou propriedade)
+            // Filtragem inteligente por categoria Pai e Subcategoria (via nome base ou propriedade)
+
+             if (categoriaFiltro !== "todos") {
+                produtosFiltrados = produtosAgrupados.filter(p => {
+                    const pertenceCategoria = p.categoria.toLowerCase() === categoriaFiltro.toLowerCase();
+                    if (!pertenceCategoria) return false;
+                    
+                    if (subcategoriaFiltro !== "todas") {
+                        const nomeProd = p.nomeBase.toLowerCase();
+                        
+                        // REGRA ADICIONADA: Se filtrar por biquíni, aceita também "top", "cortininha" e "cortinão"
+                        if (subcategoriaFiltro.toLowerCase() === "biquíni") {
+                            return nomeProd.includes("biquíni") || 
+                                   nomeProd.includes("biquini") || 
+                                   nomeProd.includes("top") || 
+                                   nomeProd.includes("cortininha") || 
+                                   nomeProd.includes("cortinão") || 
+                                   nomeProd.includes("cortinao"); // Prevenção sem acento
+                        }
+                        
+                        // Filtro padrão para as demais subcategorias (calça, saída, maio)
+                        return nomeProd.includes(subcategoriaFiltro.toLowerCase());
+                    }
+                    return true;
+                });
             } else {
                 produtosFiltrados = [...produtosAgrupados];
             }
@@ -213,21 +243,25 @@
                 });
             });
 
-            // CORREÇÃO: Paginação agora limita de forma consistente tanto para "todos" quanto para subcategorias
             const totalItensFiltrados = produtosFiltrados.length;
             const produtosParaExibir = produtosFiltrados.slice(0, produtosExibidosQuantidade);
 
-            // OTIMIZAÇÃO: Criação de um DocumentFragment para injetar tudo na tela de uma só vez (Performance Máxima)
             const fragmentoGeral = document.createDocumentFragment();
-
-            // Mapeia os blocos por categoria sem loops aninhados pesados que travam o DOM
             const categoriasUnicas = [...new Set(produtosParaExibir.map(p => p.categoria))];
             const blocosMap = {};
+
             categoriasUnicas.forEach(cat => {
                 const secaoCategoria = document.createElement("div");
                 secaoCategoria.classList.add("categoria-bloco");
                 const tituloCategoria = document.createElement("h2");
-                tituloCategoria.textContent = cat;
+
+                // Exibe o título dinâmico se houver subcategoria ativa
+                if (subcategoriaFiltro !== "todas" && cat.toLowerCase() === categoriaFiltro.toLowerCase()) {
+                    tituloCategoria.textContent = `${cat} - ${subcategoriaFiltro}`;
+                } else {
+                    tituloCategoria.textContent = cat;
+                }
+
                 tituloCategoria.classList.add("categoria-titulo");
                 const gridProdutos = document.createElement("div");
                 gridProdutos.classList.add("grid-produtos");
@@ -236,6 +270,7 @@
                 blocosMap[cat] = gridProdutos;
                 fragmentoGeral.appendChild(secaoCategoria);
             });
+
             let contadorItemGlobal = 0;
             produtosParaExibir.forEach((prod) => {
                 const gridDestino = blocosMap[prod.categoria];
@@ -288,6 +323,7 @@
                 infoBloco.appendChild(tamanhosElement);
                 card.appendChild(imgContainer);
                 card.appendChild(infoBloco);
+
                 function atualizarVisualCard() {
                     const v = prod.variantes[varianteAtivaIndex];
                     if (!v) return;
@@ -333,7 +369,7 @@
                         containerCores.style.display = "none";
                     }
                     if (v.tamanhos && v.tamanhos.length > 0) {
-                        tamanhosElement.textContent = `Tamanho: ${ v.tamanhos.join(" / ") }`;
+                        tamanhosElement.textContent = `Tamanho: ${v.tamanhos.join(" / ")}`;
                         tamanhosElement.style.display = "block";
                     } else {
                         tamanhosElement.style.display = "none";
@@ -364,36 +400,49 @@
                 });
                 gridDestino.appendChild(card);
             });
-            // Aplica todas as categorias e itens de uma única vez na estrutura visual da tela
             container.appendChild(fragmentoGeral);
             gerenciarVisibilidadeBotao(produtosParaExibir.length, totalItensFiltrados);
         }
-        /* ==========================================================================
-        6. Restante dos Controles (Modal, Gestos e Seguranças)
-        ========================================================================== */
+        /* Modificado para suportar cliques nos submenus e fechamento automático */
         function configurarFiltrosMenu() {
-            const linksMenu = document.querySelectorAll('.menu a');
+            const linksMenu = document.querySelectorAll('.menu a:not(.dropdown-toggle)');
+            const togglesDropdown = document.querySelectorAll('.dropdown-toggle');
+            // Gerencia abertura dos submenus no mobile/desktop clique
+            togglesDropdown.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const pai = toggle.parentElement;
+                    pai.classList.toggle('aberto');
+                });
+            });
             linksMenu.forEach(link => {
                 link.addEventListener('click', (e) => {
                     const textoBotao = link.textContent.trim().toLowerCase();
                     produtosExibidosQuantidade = 8;
-                    if (textoBotao === "início" || textoBotao === "inicio") {
-                        renderizarCatalogo("todos");
-                        linksMenu.forEach(l => l.classList.remove('ativo'));
+                    // Remove classes ativas de todos os links, inclusive submenus
+                    document.querySelectorAll('.menu a').forEach(l => l.classList.remove('ativo'));
+                    const paiCategoria = link.getAttribute('data-pai');
+                    const subCategoria = link.getAttribute('data-sub');
+                    if (paiCategoria && subCategoria) {
+                        // Clicou em uma subcategoria específica
+                        e.preventDefault();
                         link.classList.add('ativo');
-                        return;
+                        link.closest('.dropdown').querySelector('.dropdown-toggle').classList.add('ativo');
+                        renderizarCatalogo(paiCategoria, 0, subCategoria);
+                    } else {
+                        // Clicou em um link principal (Início, Produtos, Lingerie)
+                        if (textoBotao === "início" || textoBotao === "inicio" || textoBotao === "produtos") {
+                            renderizarCatalogo("todos", 0, "todas");
+                        } else {
+                            e.preventDefault();
+                            renderizarCatalogo(textoBotao, 0, "todas");
+                        }
+                        link.classList.add('ativo');
                     }
-                    e.preventDefault();
-                    linksMenu.forEach(l => l.classList.remove('ativo'));
-                    link.classList.add('ativo');
-                    if (textoBotao === "produtos") {
-                        renderizarCatalogo("todos");
-                    } else if (textoBotao === "moda praia") {
-                        renderizarCatalogo("Moda Praia");
-                    } else if (textoBotao === "lingerie") {
-                        renderizarCatalogo("Lingerie");
-                    }
+                    // Fecha menus expansivos mobile
                     if (menuList) menuList.classList.remove('ativo');
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('aberto'));
                 });
             });
         }
@@ -438,7 +487,7 @@
                     const tagCor = document.createElement("div");
                     tagCor.id = "modalProductColor";
                     tagCor.className = "modal-product-color-badge";
-                    tagCor.textContent = `Cor: ${ corDaFoto }`;
+                    tagCor.textContent = `Cor: ${corDaFoto}`;
                     productTitle.parentNode.insertBefore(tagCor, productTitle.nextSibling);
                 }
             }
@@ -452,8 +501,8 @@
             let y = ((clientY - rect.top) / rect.height) * 100;
             x = Math.max(0, Math.min(100, x));
             y = Math.max(0, Math.min(100, y));
-            imgExpanded.style.transformOrigin = `${ x }% ${ y }%`;
-            imgExpanded.style.transform = `scale(${ zoomLevel })`;
+            imgExpanded.style.transformOrigin = `${x}% ${y}%`;
+            imgExpanded.style.transform = `scale(${zoomLevel})`;
         }
         function resetZoom() {
             isZoomed = false;
@@ -467,9 +516,9 @@
         function aplicarZoomControles() {
             if (imgExpanded) {
                 imgExpanded.style.transformOrigin = "center center";
-                imgExpanded.style.transform = `scale(${ zoomLevel })`;
+                imgExpanded.style.transform = `scale(${zoomLevel})`;
             }
-            if (zoomIndicator) zoomIndicator.textContent = `${ zoomLevel.toFixed(1) } x`;
+            if (zoomIndicator) zoomIndicator.textContent = `${zoomLevel.toFixed(1)} x`;
         }
         if (zoomContainer) {
             zoomContainer.addEventListener("mousemove", (e) => {
