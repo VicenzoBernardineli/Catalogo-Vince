@@ -3,10 +3,11 @@
         "nome": "Biquíni-nó Liso",
         "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340868/Image_from_Image_-_2025-11-21T073616.096.png",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
+        "tamanhos": [ "P ao GG", "48 ao 54"],
+        "precosPorTamanho": { "P ao GG": 49.90}
     },
     {
         "nome": "Biquíni-nó Liso",
@@ -30,10 +31,11 @@
         "nome": "Biquíni-nó Estampado",
         "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/Image_from_Image_-_2025-10-02T233520.027.png",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Folhas", "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
+        "tamanhos": [ "P ao GG", "48 ao 54"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 ao 50": 59.90, "52 e 54": 69.90}
     },
     {
         "nome": "Biquíni-nó Estampado",

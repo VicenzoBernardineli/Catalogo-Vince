@@ -80,9 +80,12 @@
                         preco: typeof p.preco === 'number' ? p.preco : 0,
                         badge: p.badge ? sanitizarTexto(p.badge) : "",
                         cores: Array.isArray(p.cores) ? p.cores.map(c => sanitizarTexto(String(c).trim())) : [],
-                        tamanhos: Array.isArray(p.tamanhos) ? p.tamanhos.map(t => sanitizarTexto(String(t).trim())) : []
+                        tamanhos: Array.isArray(p.tamanhos) ? p.tamanhos.map(t => sanitizarTexto(String(t).trim())) : [],
+                        // NOVA LINHA ADICIONADA:
+                        precosPorTamanho: p.precosPorTamanho ? p.precosPorTamanho : null
                     };
                 });
+
 
                 const mapaAgrupado = {};
                 produtosOriginais.forEach(p => {
@@ -209,24 +212,24 @@
             // Filtragem inteligente por categoria Pai e Subcategoria (via nome base ou propriedade)
             // Filtragem inteligente por categoria Pai e Subcategoria (via nome base ou propriedade)
 
-             if (categoriaFiltro !== "todos") {
+            if (categoriaFiltro !== "todos") {
                 produtosFiltrados = produtosAgrupados.filter(p => {
                     const pertenceCategoria = p.categoria.toLowerCase() === categoriaFiltro.toLowerCase();
                     if (!pertenceCategoria) return false;
-                    
+
                     if (subcategoriaFiltro !== "todas") {
                         const nomeProd = p.nomeBase.toLowerCase();
-                        
+
                         // REGRA ADICIONADA: Se filtrar por biquíni, aceita também "top", "cortininha" e "cortinão"
                         if (subcategoriaFiltro.toLowerCase() === "biquíni") {
-                            return nomeProd.includes("biquíni") || 
-                                   nomeProd.includes("biquini") || 
-                                   nomeProd.includes("top") || 
-                                   nomeProd.includes("cortininha") || 
-                                   nomeProd.includes("cortinão") || 
-                                   nomeProd.includes("cortinao"); // Prevenção sem acento
+                            return nomeProd.includes("biquíni") ||
+                                nomeProd.includes("biquini") ||
+                                nomeProd.includes("top") ||
+                                nomeProd.includes("cortininha") ||
+                                nomeProd.includes("cortinão") ||
+                                nomeProd.includes("cortinao"); // Prevenção sem acento
                         }
-                        
+
                         // Filtro padrão para as demais subcategorias (calça, saída, maio)
                         return nomeProd.includes(subcategoriaFiltro.toLowerCase());
                     }
@@ -458,16 +461,52 @@
             document.body.style.overflow = "";
             resetZoom();
         }
+
         function nextImagem() {
-            if (modalProdutosLista.length === 0) return;
-            currentIndex = (currentIndex + 1) % modalProdutosLista.length;
-            updateModalContent();
+            if (modalProdutosLista.length === 0 || !imgExpanded) return;
+            
+            // Limpa qualquer classe de animação ativa
+            imgExpanded.className = "modal-content";
+            void imgExpanded.offsetWidth; // Reseta a física de renderização do navegador
+
+            // Próximo produto: folha dobra e sai pela esquerda
+            imgExpanded.classList.add("virar-esquerda-sair");
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % modalProdutosLista.length;
+                updateModalContent();
+                
+                // A nova folha entra se desdobrando a partir da esquerda
+                imgExpanded.className = "modal-content virar-esquerda-entrar";
+                
+                setTimeout(() => {
+                    imgExpanded.className = "modal-content";
+                }, 450);
+            }, 350);
         }
+
         function prevImagem() {
-            if (modalProdutosLista.length === 0) return;
-            currentIndex = (currentIndex - 1 + modalProdutosLista.length) % modalProdutosLista.length;
-            updateModalContent();
+            if (modalProdutosLista.length === 0 || !imgExpanded) return;
+
+            imgExpanded.className = "modal-content";
+            void imgExpanded.offsetWidth;
+
+            // Produto anterior: folha dobra e sai pela direita
+            imgExpanded.classList.add("virar-direita-sair");
+
+            setTimeout(() => {
+                currentIndex = (currentIndex - 1 + modalProdutosLista.length) % modalProdutosLista.length;
+                updateModalContent();
+                
+                // A folha anterior entra se desdobrando a partir da direita
+                imgExpanded.className = "modal-content virar-direita-entrar";
+                
+                setTimeout(() => {
+                    imgExpanded.className = "modal-content";
+                }, 450);
+            }, 350);
         }
+
         function updateModalContent() {
             const itemAtivo = modalProdutosLista[currentIndex];
             if (!itemAtivo) return;
@@ -491,9 +530,40 @@
                     productTitle.parentNode.insertBefore(tagCor, productTitle.nextSibling);
                 }
             }
-            if (productPriceModal) productPriceModal.textContent = formatarPreco(itemAtivo.preco);
+
+            // ==========================================================================
+            // MODIFICAÇÃO: Exibição elegante em formato de Grid de Etiquetas no Modal
+            // ==========================================================================
+            if (productPriceModal) {
+                productPriceModal.innerHTML = ""; // Limpa o conteúdo antigo
+
+                if (itemAtivo.precosPorTamanho && Object.keys(itemAtivo.precosPorTamanho).length > 0) {
+                    // Cria um container flexível para as etiquetas de preço
+                    const containerGrade = document.createElement("div");
+                    containerGrade.className = "modal-grade-precos-container";
+
+                    for (const [grade, valor] of Object.entries(itemAtivo.precosPorTamanho)) {
+                        const etiqueta = document.createElement("div");
+                        etiqueta.className = "etiqueta-preco-grade";
+
+                        etiqueta.innerHTML = `
+                            <span class="grade-texto">${grade}</span>
+                            <span class="grade-valor">${formatarPreco(valor)}</span>
+                        `;
+                        containerGrade.appendChild(etiqueta);
+                    }
+                    productPriceModal.appendChild(containerGrade);
+                } else {
+                    // Preço único caso não tenha grade cadastrada
+                    const precoUnico = document.createElement("span");
+                    precoUnico.className = "modal-preco-unico";
+                    precoUnico.textContent = formatarPreco(itemAtivo.preco);
+                    productPriceModal.appendChild(precoUnico);
+                }
+            }
             resetZoom();
         }
+
         function moverZoom(clientX, clientY) {
             if (!imgExpanded || !zoomContainer) return;
             const rect = zoomContainer.getBoundingClientRect();
@@ -520,6 +590,14 @@
             }
             if (zoomIndicator) zoomIndicator.textContent = `${zoomLevel.toFixed(1)} x`;
         }
+        // ==========================================================================
+        // NOVA FUNCIONALIDADE: Controle de Gestos (Swipe) para Celular
+        // ==========================================================================
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
         if (zoomContainer) {
             zoomContainer.addEventListener("mousemove", (e) => {
                 if (zoomLevel > 1.0) moverZoom(e.clientX, e.clientY);
@@ -536,8 +614,13 @@
                     resetZoom();
                 }
             });
+
+            // Captura onde o cliente encostou o dedo na tela
             zoomContainer.addEventListener("touchstart", (e) => {
                 if (e.touches && e.touches.length === 1) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+
                     const now = new Date().getTime();
                     const timesince = now - lastTap;
                     if ((timesince < 300) && (timesince > 0)) {
@@ -545,7 +628,7 @@
                         isZoomed = !isZoomed;
                         if (isZoomed) {
                             zoomLevel = 2.0;
-                            moverZoom(e.touches.clientX, e.touches.clientY);
+                            moverZoom(e.touches[0].clientX, e.touches[0].clientY);
                         } else {
                             resetZoom();
                         }
@@ -553,13 +636,48 @@
                     lastTap = now;
                 }
             }, { passive: false });
+
+            // Gerencia o movimento do dedo na tela
             zoomContainer.addEventListener("touchmove", (e) => {
-                if (zoomLevel > 1.0 && e.touches && e.touches.length === 1) {
-                    e.preventDefault();
-                    moverZoom(e.touches.clientX, e.touches.clientY);
+                if (e.touches && e.touches.length === 1) {
+                    // Se estiver com zoom ampliado, move o mapa da foto normalmente
+                    if (zoomLevel > 1.0) {
+                        e.preventDefault();
+                        moverZoom(e.touches[0].clientX, e.touches[0].clientY);
+                    } else {
+                        // Se estiver em tamanho normal, guarda a posição final para calcular o arrasto
+                        touchEndX = e.touches[0].clientX;
+                        touchEndY = e.touches[0].clientY;
+                    }
                 }
-            }, { passive: false });
+            }, { passive: true });
+
+            // Quando o cliente tira o dedo da tela, calcula a direção do movimento
+            zoomContainer.addEventListener("touchend", () => {
+                // Só executa a mudança se o produto não estiver com zoom ampliado
+                if (zoomLevel === 1.0 && touchEndX !== 0) {
+                    const diferencaX = touchStartX - touchEndX;
+                    const diferencaY = touchStartY - touchEndY;
+
+                    // Define uma sensibilidade mínima para ignorar tremores do dedo (50 pixels)
+                    if (Math.abs(diferencaX) > 50 && Math.abs(diferencaX) > Math.abs(diferencaY)) {
+                        if (diferencaX > 0) {
+                            // Arrastou da direita para a esquerda -> Próximo Produto
+                            nextImagem();
+                        } else {
+                            // Arrastou da esquerda para a direita -> Produto Anterior
+                            prevImagem();
+                        }
+                    }
+                }
+                // Reseta as variáveis de toque para o próximo movimento
+                touchStartX = 0;
+                touchEndX = 0;
+                touchStartY = 0;
+                touchEndY = 0;
+            }, { passive: true });
         }
+
         const zIn = document.getElementById("zoomIn");
         const zOut = document.getElementById("zoomOut");
         if (zIn) {

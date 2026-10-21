@@ -308,29 +308,34 @@ a {
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.05));
 }
 
-/* Painel de Controles Superior (+ / 1x / -) */
+/* ==========================================================================
+   POSICIONAMENTO ESTRATÉGICO DOS BOTÕES DE ZOOM (NOVO)
+   ========================================================================== */
 .zoom-controls {
     position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 25px;
+    left: 35px;
+    /* Alinhado perfeitamente no canto superior esquerdo */
     display: flex;
     align-items: center;
-    gap: 15px;
-    background: #FFFFFF;
-    padding: 6px 20px;
-    border-radius: 40px;
-    z-index: 1015;
-    box-shadow: 0 4px 25px rgba(226, 154, 154, 0.2);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 4px 12px;
+    border-radius: 50px;
+    z-index: 1025;
+    /* Garante que fica visível, mas não atrapalha o botão fechar (X) */
     border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .zoom-controls button {
     background: transparent;
     border: none;
     color: var(--cor-texto-escuro);
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
     cursor: pointer;
     width: 32px;
     height: 32px;
@@ -347,10 +352,10 @@ a {
 }
 
 .zoom-controls span {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--cor-primaria-dark);
-    min-width: 30px;
+    min-width: 28px;
     text-align: center;
 }
 
@@ -433,26 +438,36 @@ a {
 /* Ajustes finos para que o modal fique perfeito e sem quebras no Celular */
 @media (max-width: 768px) {
     .zoom-container {
-        width: 90vw;
-        height: 50vh;
-        /* Reduz ligeiramente a altura para sobrar espaço para os botões no celular */
+        width: 92vw;
+        height: 52vh;
+        margin-top: 40px;
+        /* Cria um respiro para a foto não colar nos botões superiores */
+    }
+
+    /* No celular, os botões vão para o topo esquerdo de forma anatômica e limpa */
+    .zoom-controls {
+        top: 20px;
+        left: 20px;
+        padding: 3px 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .zoom-controls button {
+        width: 28px;
+        height: 28px;
+        font-size: 1.1rem;
+    }
+
+    /* Garante que o botão de fechar (X) fique simétrico no lado oposto */
+    .close-btn {
+        right: 20px;
+        top: 15px;
+        font-size: 2.2rem;
     }
 
     .nav-btn {
         display: none;
         /* Remove as setas no mobile para dar foco total ao arrastar com o dedo */
-    }
-
-    .close-btn {
-        right: 25px;
-        top: 25px;
-        font-size: 2.2rem;
-    }
-
-    .zoom-controls {
-        top: auto;
-        bottom: 30px;
-        /* Joga os botões de zoom para baixo no celular, facilitando o clique com o polegar */
     }
 
     #productTitle {
@@ -627,13 +642,86 @@ Mídia Queries Avançadas para Celulares e Tablets==============================
     text-transform: capitalize;
 }
 
-/* Estilo do Preço Dentro do Modal Aberto */
+/* Melhoria de preço por tamanho*/
+
 #productPriceModal {
-    color: var(--cor-primaria-dark);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-top: 4px;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 12px;
     z-index: 1010;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Container que alinha as etiquetas horizontalmente */
+.modal-grade-precos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* A etiqueta em formato de pílula bicolor */
+.etiqueta-preco-grade {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: var(--transicao);
+}
+
+.etiqueta-preco-grade:hover {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 6px 20px rgba(226, 154, 154, 0.08);
+}
+
+/* Lado Esquerdo: O tamanho (ex: P ao GG) */
+.grade-texto {
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto-escuro);
+    padding: 6px 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-right: 1px solid var(--cor-borda);
+}
+
+/* Lado Direito: O valor em dinheiro */
+.grade-valor {
+    color: var(--cor-primaria-dark);
+    padding: 6px 14px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+/* Estilo para quando o produto tem apenas um preço padrão */
+.modal-preco-unico {
+    color: var(--cor-primaria-dark);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Ajustes responsivos para celulares pequenos */
+@media (max-width: 480px) {
+    .modal-grade-precos-container {
+        gap: 6px;
+    }
+
+    .etiqueta-preco-grade {
+        font-size: 0.75rem;
+    }
+
+    .grade-texto,
+    .grade-valor {
+        padding: 5px 10px;
+    }
 }
 
 /* ==========================================================================
@@ -1193,4 +1281,66 @@ body {
         padding: 12px 10% !important;
         border-bottom: 1px solid #FAF6F6;
     }
+}
+
+/* ==========================================================================
+   ANIMAÇÃO ESTILO VIRADA DE PÁGINA DE LIVRO 3D (DIREÇÕES DINÂMICAS)
+   ========================================================================== */
+
+/* Define a perspectiva tridimensional no container da foto */
+.zoom-container {
+    perspective: 1200px;
+    position: relative;
+}
+
+.modal-content {
+    will-change: transform, opacity, filter;
+}
+
+/* --------------------------------------------------------------------------
+   FAIXA 1: AVANÇAR (Vira para a Esquerda)
+   -------------------------------------------------------------------------- */
+.virar-esquerda-sair {
+    transform-origin: left center;
+    animation: livroEsquerdaSair 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.virar-esquerda-entrar {
+    transform-origin: left center;
+    animation: livroEsquerdaEntrar 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes livroEsquerdaSair {
+    0% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+    30% { filter: drop-shadow(-10px 15px 30px rgba(0,0,0,0.2)); }
+    100% { transform: rotateY(-75deg) translateX(-100%) scale(0.9); opacity: 0; filter: drop-shadow(-20px 20px 40px rgba(0,0,0,0)); }
+}
+
+@keyframes livroEsquerdaEntrar {
+    0% { transform: rotateY(-75deg) translateX(-100%) scale(0.9); opacity: 0; }
+    100% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+}
+
+/* --------------------------------------------------------------------------
+   FAIXA 2: VOLTAR (Vira para a Direita)
+   -------------------------------------------------------------------------- */
+.virar-direita-sair {
+    transform-origin: right center;
+    animation: livroDireitaSair 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.virar-direita-entrar {
+    transform-origin: right center;
+    animation: livroDireitaEntrar 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes livroDireitaSair {
+    0% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+    30% { filter: drop-shadow(10px 15px 30px rgba(0,0,0,0.2)); }
+    100% { transform: rotateY(75deg) translateX(100%) scale(0.9); opacity: 0; filter: drop-shadow(20px 20px 40px rgba(0,0,0,0)); }
+}
+
+@keyframes livroDireitaEntrar {
+    0% { transform: rotateY(75deg) translateX(100%) scale(0.9); opacity: 0; }
+    100% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
 }
