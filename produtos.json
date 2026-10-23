@@ -1,95 +1,103 @@
 [
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340868/Image_from_Image_-_2025-11-21T073616.096.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 49.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao GG", "48 ao 54"],
-        "precosPorTamanho": { "P ao GG": 49.90}
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 79.90, "52 e 54": 99.90}
     },
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340871/Image_from_Image_-_2025-11-21T081806.403.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 79.90, "52 e 54": 99.90}
     },
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/8080b9a0-acbf-4e98-8bf4-a79fb70426ba.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
-    },
-    {
-        "nome": "Biquíni-nó Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/Image_from_Image_-_2025-10-02T233520.027.png",
-        "categoria": "Moda Praia",
-        "preco": 49.90,
-        "badge": "",
-        "cores": [ "Folhas", "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao GG", "48 ao 54"],
-        "precosPorTamanho": { "P ao GG": 49.90, "48 ao 50": 59.90, "52 e 54": 69.90}
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 79.90, "52 e 54": 99.90}
     },
     {
         "nome": "Biquíni-nó Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Folhas", "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 98.90, "52 e 54": 114.90}
     },
     {
         "nome": "Biquíni-nó Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/55db80d5-3795-48dd-adc0-95182aa53d16.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Folhas", "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao GG", "48 ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 98.90, "52 e 54": 114.90}
+    },
+    {
+        "nome": "Biquíni-nó Estampado",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 69.90,
+        "badge": "",
+        "cores": [ "Folhas", "Onça", "Fundo-Preto"],
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 98.90, "52 e 54": 114.90}
     },
     {
         "nome": "Biquíni sem Bojo Com Aro Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/1792066515572.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Laranja"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90, "52 e 54": 79.90}
     },
     {
         "nome": "Biquíni sem Bojo Com Aro Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/1792066789190.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Fundo-Preto"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90, "52 e 54": 89.90}
     },
     {
         "nome": "Calça Asa Delta Laço Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Trilobal"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Asa Delta Laço Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Trilobal"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Asa Delta Larga Fio Duplo Estampado",
@@ -98,960 +106,1068 @@
         "preco": 149.90,
         "badge": "",
         "cores": [ "Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 69.90}
     },
     {
         "nome": "Calça Cós Franzido Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 64.90, "52 e 54": 69.90}
     },
     {
         "nome": "Calça Cós Franzido Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 74.90,
         "badge": "",
         "cores": [ "Onça", "Folhas", "Pink"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Calça Cós Franzido Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340871/Image_from_Image_-_2025-10-07T234529.564.png",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Onça", "Folhas", "Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 74.90, "48 e 50": 79.90, "52 e 54": 89.90}
     },
     {
         "nome": "Calça Cós Franzido Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 74.90,
         "badge": "",
         "cores": [ "Onça", "Folhas", "Pink"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 74.90, "48 e 50": 79.90, "52 e 54": 89.90}
     },
+    {
+        "nome": "Calça Cós Franzido Estampado",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 74.90,
+        "badge": "",
+        "cores": [ "Onça", "Folhas", "Pink"],
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 74.90, "48 e 50": 79.90, "52 e 54": 89.90}
+    },
+
     {
         "nome": "Calça Fio Regulagem Lateral 0,7 Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto", "Laranja"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto", "Laranja"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/1792068051074-1.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Hot Pants Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340867/1792069268583.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Preto", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
     },
     {
         "nome": "Calça Hot Pants Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340856/1792070519815.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Preto", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
     },
     {
         "nome": "Calça Hot Pants Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340858/1792072666410.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 72.90,
         "badge": "",
         "cores": [ "Tie Dye"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 72.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Laço Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Trilobal"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "N"],
+        "precosPorTamanho": { "P ao GG": 69.90}
     },
     {
         "nome": "Calça La Vince Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça La Vince Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho"],
-        "tamanhos": [ "P ao 50"]
-    },
-    {
-        "nome": "Calça La Vince Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340868/1792079902660-1.png",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Onça", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça La Vince Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça La Vince Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340867/1792080491472.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "P ao 50"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
+    },
+    {
+        "nome": "Calça La Vince Estampado",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 59.90,
+        "badge": "",
+        "cores": [ "Onça", "Fundo-Preto", "Folhas"],
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Pala Franzida Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340855/1792089083329.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 57.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 57.90, "48 e 50": 64.90}
     },
     {
         "nome": "Calça Pala Franzida Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340857/1792099044038.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 57.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 57.90, "48 e 50": 64.90}
     },
     {
         "nome": "Calça Pala Franzida Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340857/1792095062079.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Jeans", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340858/1792096719136.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Jeans", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340852/d15d4f8b-f5e1-4e43-a416-51f2cc7a5d4d.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Jeans", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340859/1792097124353.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto", "Jeans", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 54.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 54.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 54.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 54.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340860/1792090847101.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 54.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 54.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Jeans", "Fundo-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Jeans", "Fundo-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Jeans", "Fundo-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Jeans", "Fundo-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calça Meio Fio Stefany Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Meio Fio Stefany Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Meio Fio Stefany Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Meio Fio Stefany Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Fundo-Color", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 69.90}
     },
     {
         "nome": "Calça Meio Fio Stefany Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Fundo-Color", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 69.90}
     },
     {
         "nome": "Calça Regulagem Lateral 0,7 Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG"],
+        "precosPorTamanho": { "P ao GG": 59.90}
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340856/1792100940250.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto-Flora", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340871/1792066143473.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 49.90,
         "badge": "",
         "cores": [ "Preto-Flora", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 49.90, "48 e 50": 59.90}
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340860/1792103097107.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340854/1792103605591.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Onça", "Fundo-Preto"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340867/1792104357201.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 66.90, "52 e 54": 76.90}
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340864/1792104501871.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 66.90, "52 e 54": 76.90}
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340855/1792105578501.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 66.90, "52 e 54": 76.90}
     },
     {
         "nome": "Calça Stefany Simples Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Trilobal", "Flor-Pink", "Fundo Bege"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 71.90, "52 e 54": 79.90}
     },
     {
         "nome": "Calça Stefany Simples Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Trilobal", "Flor-Pink", "Fundo Bege"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 71.90, "52 e 54": 79.90}
     },
     {
         "nome": "Calça Stefany Simples Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340865/1792106003793.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Trilobal", "Flor-Pink", "Fundo Bege"],
-        "tamanhos": [ "P ao 54"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 71.90, "52 e 54": 79.90}
     },
     {
         "nome": "Calça Stefany Fio Duplo Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Calça Stefany Fio Duplo Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 59.90,
         "badge": "",
         "cores": [ "Preto", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Cortinão Base Duplo Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/cortin%C3%A3o_base_duplo_fundo_bege.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 94.90}
     },
     {
         "nome": "Cortinão Base Duplo Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340854/cortinao_base_dupla_folhas.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 59.90, "48 e 50": 69.90}
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340857/1792156850525.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340864/1792156666374.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340867/1792157099232.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340865/1792157812158.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Laranja", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340863/1792154474810.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340861/1792150172067.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340860/1792150447568.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340862/1792155355198.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas" , "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340854/1792150710384-1.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340862/1792155523898.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340871/1792155698044.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/Cortininha_preto_Pedras.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Jeans", "Fundo-Bege", "Flor-Pink", "Fundo-Preto", "Folhas", "Flora"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 89.90}
     },
     {
         "nome": "Cropped Amarração Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340860/1792159172060.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Fundo-Preto"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340864/1792163894037.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 89.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 89.90, "48 e 50": 99.90}
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340862/1792164235052.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 89.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 89.90, "48 e 50": 99.90}
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340864/1792163457672.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 89.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 89.90, "48 e 50": 99.90}
     },
     {
         "nome": "Short Praia Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340860/1792165243418.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 75.90,
         "badge": "",
         "cores": [ "Preto"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 75.90, "48 e 50": 85.90, "52 e 54": 99.90}
     },
     {
         "nome": "Calesson Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Fundo-Preto", "Amarela"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calesson Duplo Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Fundo-Preto", "Amarela"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     },
     {
         "nome": "Calesson Praia Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 61.90,
         "badge": "",
         "cores": [ "Preto"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Short Saída Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340859/Image_from_Image_-_2025-11-14T215826.222.png",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 61.90, "48 e 50": 69.90}
     },
     {
         "nome": "Short Saída Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340865/Image_from_Image_-_2025-11-15T215059.211.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340856/Image_from_Image_-_2025-11-14T215539.743.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340862/Image_from_Image_-_2025-11-14T214749.392.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340872/Image_from_Image.png_8.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
+    },
+    {
+        "nome": "Short Saída Liso",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 69.90,
+        "badge": "",
+        "cores": [ "Preto", "Conhaque", "Pink", "Azul", "Laranja", "Preto Layse"],
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340863/Shorts_on%C3%A7a.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 74.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 74.90, "48 e 50": 79.90, "52 e 54": 94.90}
     },
     {
         "nome": "Short Saída Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340867/Shorts_Sa%C3%ADda_Flor_Pink.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Short Saída Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340856/Shorts_Frontal_Folha-1s.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Folhas"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Top Alça Fina Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340852/top_al%C3%A7a_fina.jpg",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Top Alça Fina Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340851/e3facd8d-d31d-4dc4-a5df-38cb0170e201.jpg",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 75.90, "52 e 54": 84.90}
     },
     {
         "nome": "Top Alça Fina Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 64.90,
         "badge": "",
         "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
+    },
+    {
+        "nome": "Top Alça Fina Liso",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 64.90,
+        "badge": "",
+        "cores": [ "Preto", "Roxo", "Laranja"],
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
+    },
+    {
+        "nome": "Top Alça Fina Liso",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 64.90,
+        "badge": "",
+        "cores": [ "Preto", "Roxo", "Laranja"],
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 64.90, "48 e 50": 74.90}
     },
     {
         "nome": "Top Alça Fina Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 71.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Top Alça Fina Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/47a34534-4a13-4680-88cd-1ed881193614.jpg",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
-    },
-    {
-        "nome": "Top Alça Fina Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340854/396c58a5-ef8b-4390-ba4b-11f934e60169.jpg",
-        "categoria": "Moda Praia",
-        "preco": 149.90,
-        "badge": "",
-        "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 71.90, "48 e 50": 81.90}
     },
     {
         "nome": "Top Alça Fina Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 71.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 71.90, "48 e 50": 81.90}
+    },
+    {
+        "nome": "Top Alça Fina Estampado",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 71.90,
+        "badge": "",
+        "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 71.90, "48 e 50": 81.90}
+    },
+    {
+        "nome": "Top Alça Fina Estampado",
+        "imagem": "",
+        "categoria": "Moda Praia",
+        "preco": 71.90,
+        "badge": "",
+        "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 71.90, "48 e 50": 81.90}
     },
     {
         "nome": "Top Alça Larga Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 72.90,
         "badge": "",
         "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 72.90, "48 e 50": 81.90, "52 e 54": 87.90}
     },
     {
         "nome": "Top Alça Larga Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 72.90,
         "badge": "",
         "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 72.90, "48 e 50": 81.90, "52 e 54": 87.90}
     },
     {
         "nome": "Top Alça Larga Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 72.90,
         "badge": "",
         "cores": [ "Preto", "Roxo", "Laranja"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 72.90, "48 e 50": 81.90, "52 e 54": 87.90}
     },
     {
         "nome": "Top Alça Larga Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90, "52 e 54": 97.90}
     },
     {
         "nome": "Top Alça Larga Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90, "52 e 54": 97.90}
     },
     {
         "nome": "Top Alça Larga Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90, "52 e 54": 97.90}
     },
     {
         "nome": "Top Alça Larga Estampado",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Tie Dye", "Fundo-Preto", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50", "52 e 54"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90, "52 e 54": 97.90}
     },
     {
         "nome": "Top Laço Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340854/6229d3de-d9e9-4d38-928a-323b6f7b325c.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Top Laço Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/2fab7cb7-5e35-4a00-9269-0c56316ff00c.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 75.90}
     },
     {
         "nome": "Top Laço Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340855/54ff0e7b-dfbe-4e6c-baee-96d18556a6ae.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Fundo-Bege", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Laço Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340853/390c60a0-bb6f-4a0d-bfb9-b926b3b02604.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Fundo-Bege", "Flor-Pink"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Stefany Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340866/1792180963820.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 74.90}
     },
     {
         "nome": "Top Stefany Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340852/72a99f75-baaf-4222-a1f5-8e6065569935.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 74.90}
     },
     {
         "nome": "Top Stefany Liso",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340865/1792182085698.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 65.90,
         "badge": "",
         "cores": [ "Preto", "Azul-Marinho", "Lilas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 65.90, "48 e 50": 74.90}
     },
     {
         "nome": "Top Stefany Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340861/1792179913131.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Fundo-Bege", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Stefany Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340863/1792180564554.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Fundo-Bege", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Stefany Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340868/373c4038-6d71-4724-aa58-ec69798fdefc.jpg",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Fundo-Bege", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Stefany Estampado",
-        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/c_scale,w_800,f_auto,q_auto/v1792340869/Image_from_Image_-_2025-10-07T225946.805.png",
+        "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 79.90,
         "badge": "",
         "cores": [ "Onça", "Flor-Pink", "Fundo-Bege", "Folhas"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 79.90, "48 e 50": 89.90}
     },
     {
         "nome": "Top Triangulo Liso",
         "imagem": "",
         "categoria": "Moda Praia",
-        "preco": 149.90,
+        "preco": 69.90,
         "badge": "",
         "cores": [ "Preto"],
-        "tamanhos": [ "N"]
+        "tamanhos": [ "P ao GG", "48 e 50"],
+        "precosPorTamanho": { "P ao GG": 69.90, "48 e 50": 79.90}
     }
 ]
