@@ -1436,10 +1436,10 @@ body {
 }
 
 /* ==========================================================================
-   Configuração Base do Carrossel de Banner
+   Configuração do Banner Carrossel Ocupando Toda a Tela (Full Screen)
    ========================================================================== */
 .hero-carousel {
-    padding-top: 0; /* Removido para a imagem colar no topo absoluto da tela */
+    padding-top: 0;
     width: 100%;
     background-color: var(--cor-fundo-suave);
     position: relative;
@@ -1449,8 +1449,8 @@ body {
 .carousel-container {
     position: relative;
     width: 100%;
-    /* Se o JS falhar por algum motivo, ele usa 100vh. Se rodar, usa a altura exata calculada */
-    height: var(--carousel-height, 100vh); 
+    /* Utiliza a variável calculada pelo seu JS para ficar perfeito no celular, com 100vh de escape */
+    height: var(--carousel-height, 100vh);
     min-height: 450px;
 }
 
@@ -1460,7 +1460,6 @@ body {
     position: relative;
 }
 
-/* Estado de transição dos slides */
 .carousel-slide {
     position: absolute;
     top: 0;
@@ -1482,7 +1481,6 @@ body {
     z-index: 2;
 }
 
-/* Imagens de fundo ajustadas */
 .carousel-slide img {
     position: absolute;
     top: 0;
@@ -1490,36 +1488,37 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.80); /* Filtro escurecedor sutil para dar leitura clara ao texto branco */
+    filter: brightness(0.80);
+    /* Filtro equilibrado para manter contraste e cores */
     z-index: 1;
-    pointer-events: none; /* Bloqueia o arrasto nativo da imagem no navegador */
+    pointer-events: none;
 }
 
-/* Posicionamento dos textos sobrepostos */
+/* Caixa de texto otimizada para Desktop */
 .carousel-caption {
     position: relative;
     z-index: 3;
-    max-width: 750px;
-    padding: 0 25px;
-    color: #FFFFFF; /* Texto branco para alto contraste */
+    max-width: 800px;
+    padding: 80px 25px 0 25px;
+    color: #FFFFFF;
 }
 
 .carousel-caption h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     letter-spacing: -0.5px;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-caption p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 30px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     line-height: 1.5;
 }
 
-/* Setas de navegação redondas */
+/* Setas Laterais */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -1548,8 +1547,13 @@ body {
     border-color: var(--cor-texto-escuro);
 }
 
-.prev-btn { left: 25px; }
-.next-btn { right: 25px; }
+.prev-btn {
+    left: 25px;
+}
+
+.next-btn {
+    right: 25px;
+}
 
 /* Bolinhas de controle inferiores */
 .carousel-nav-dots {
@@ -1576,7 +1580,6 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Alinhado com a cor de destaque do seu catálogo (Rosa Quartz) */
 .dot.ativa {
     background-color: var(--cor-primaria);
     transform: scale(1.2);
@@ -1584,22 +1587,59 @@ body {
     box-shadow: 0 0 8px rgba(226, 154, 154, 0.6);
 }
 
-/* Responsividade de altura e ocultação de setas no celular */
+/* ==========================================================================
+   OTIMIZAÇÃO EXCLUSIVA PARA DISPOSITIVOS MÓVEIS (CELULARES)
+   ========================================================================== */
 @media (max-width: 768px) {
+
+    /* Força o container a preencher rigorosamente toda a tela visível do celular */
     .carousel-container {
-        height: 50vh;
-        min-height: 350px;
+        height: var(--carousel-height, 100vh) !important;
     }
 
+    /* Oculta as setas para focar totalmente no gesto de passar com o dedo */
+    .carousel-btn {
+        display: none;
+    }
+
+    /* Reposiciona a caixa de texto para a base da tela, limpando o centro da foto */
+    .carousel-slide {
+        align-items: flex-end;
+        /* Alinha o conteúdo na parte inferior */
+    }
+
+    .carousel-caption {
+        padding: 0 20px 80px 20px;
+        /* Margem inferior para não cobrir as bolinhas */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Textos menores e mais discretos para valorizar o produto ao fundo */
     .carousel-caption h1 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     }
 
     .carousel-caption p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+        padding: 0 10px;
     }
 
-    .carousel-btn {
-        display: none; /* Privilegia o movimento de passar com o dedo lateralmente */
+    /* Botão CTA mais compacto e anatômico para o clique com o polegar */
+    .botao-cta {
+        padding: 10px 28px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-nav-dots {
+        bottom: 20px;
+        /* Ajuste sutil na posição das bolinhas */
     }
 }

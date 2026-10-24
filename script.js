@@ -582,9 +582,15 @@
             gerenciarVisibilidadeBotao(produtosParaExibir.length, totalItensFiltrados);
         }
         /* Modificado para suportar cliques nos submenus e fechamento automático */
+
+        /* ==========================================================================
+    Configuração Corrigida de Filtros e Rolagem Suave do Menu Superior
+    ========================================================================== */
         function configurarFiltrosMenu() {
             const linksMenu = document.querySelectorAll('.menu a:not(.dropdown-toggle)');
             const togglesDropdown = document.querySelectorAll('.dropdown-toggle');
+            const menuFixoAltura = 80; // Altura em pixels do cabeçalho para compensação
+
             // Gerencia abertura dos submenus no mobile/desktop clique
             togglesDropdown.forEach(toggle => {
                 toggle.addEventListener('click', (e) => {
@@ -594,36 +600,74 @@
                     pai.classList.toggle('aberto');
                 });
             });
+
             linksMenu.forEach(link => {
                 link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Previne o comportamento padrão do link de forma segura
+
                     const textoBotao = link.textContent.trim().toLowerCase();
+                    const hrefAlvo = link.getAttribute('href') || '';
+
                     produtosExibidosQuantidade = 8;
+
                     // Remove classes ativas de todos os links, inclusive submenus
                     document.querySelectorAll('.menu a').forEach(l => l.classList.remove('ativo'));
+
                     const paiCategoria = link.getAttribute('data-pai');
                     const subCategoria = link.getAttribute('data-sub');
+
+                    /* --------------------------------------------------------------------------
+                       1. EXECUÇÃO DOS SEUS FILTROS ORIGINAIS (PRESERVADOS)
+                       -------------------------------------------------------------------------- */
                     if (paiCategoria && subCategoria) {
-                        // Clicou em uma subcategoria específica
-                        e.preventDefault();
+                        // Clicou em uma subcategoria específica (Ex: Biquínis, Calças)
                         link.classList.add('ativo');
-                        link.closest('.dropdown').querySelector('.dropdown-toggle').classList.add('ativo');
+                        const dropdownPai = link.closest('.dropdown');
+                        if (dropdownPai) {
+                            const togglePai = dropdownPai.querySelector('.dropdown-toggle');
+                            if (togglePai) togglePai.classList.add('ativo');
+                        }
                         renderizarCatalogo(paiCategoria, 0, subCategoria);
                     } else {
                         // Clicou em um link principal (Início, Produtos, Lingerie)
                         if (textoBotao === "início" || textoBotao === "inicio" || textoBotao === "produtos") {
                             renderizarCatalogo("todos", 0, "todas");
                         } else {
-                            e.preventDefault();
                             renderizarCatalogo(textoBotao, 0, "todas");
                         }
                         link.classList.add('ativo');
                     }
+
+                    /* --------------------------------------------------------------------------
+                       2. LÓGICA DE ROLAGEM INTELIGENTE
+                       -------------------------------------------------------------------------- */
+                    // Se for o botão de Início, rola para o topo absoluto da página
+                    if (textoBotao === "início" || textoBotao === "inicio" || hrefAlvo === "#inicio") {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+                    } else {
+                        // Para qualquer outra categoria ou subcategoria, rola até o container do catálogo
+                        const catalogoContainer = document.getElementById("catalogo-container");
+                        if (catalogoContainer) {
+                            const posicaoElemento = catalogoContainer.getBoundingClientRect().top + window.scrollY;
+                            const posicaoFinal = posicaoElemento - menuFixoAltura;
+
+                            window.scrollTo({
+                                top: posicaoFinal,
+                                behavior: "smooth"
+                            });
+                        }
+                    }
+
                     // Fecha menus expansivos mobile
                     if (menuList) menuList.classList.remove('ativo');
                     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('aberto'));
                 });
             });
         }
+
         function openModal(index) {
             if (index < 0 || index >= modalProdutosLista.length) return;
             currentIndex = index;
