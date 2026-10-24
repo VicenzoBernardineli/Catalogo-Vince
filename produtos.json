@@ -1,7 +1,7 @@
 [
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340868/Image_from_Image_-_2025-11-21T073616.096.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -11,7 +11,7 @@
     },
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340871/Image_from_Image_-_2025-11-21T081806.403.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -21,7 +21,7 @@
     },
     {
         "nome": "Biquíni-nó Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340853/8080b9a0-acbf-4e98-8bf4-a79fb70426ba.jpg",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -31,7 +31,7 @@
     },
     {
         "nome": "Biquíni-nó Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340869/Image_from_Image_-_2025-10-02T233520.027.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -51,7 +51,7 @@
     },
     {
         "nome": "Biquíni-nó Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340853/55db80d5-3795-48dd-adc0-95182aa53d16.jpg",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -61,7 +61,7 @@
     },
     {
         "nome": "Biquíni sem Bojo Com Aro Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340869/1792066515572.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -71,7 +71,7 @@
     },
     {
         "nome": "Biquíni sem Bojo Com Aro Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340869/1792066789190.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -131,7 +131,7 @@
     },
     {
         "nome": "Calça Cós Franzido Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340871/Image_from_Image_-_2025-10-07T234529.564.png",
         "categoria": "Moda Praia",
         "preco": 74.90,
         "badge": "",
@@ -162,7 +162,7 @@
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792789168/1038039091-1.png",
         "categoria": "Moda Praia",
         "preco": 49.90,
         "badge": "",
@@ -172,7 +172,7 @@
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340871/1792066143473.png",
         "categoria": "Moda Praia",
         "preco": 49.90,
         "badge": "",
@@ -192,7 +192,7 @@
     },
     {
         "nome": "Calça Fio Regulagem Lateral 1,5 Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340869/1792068051074-1.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -202,7 +202,7 @@
     },
     {
         "nome": "Calça Hot Pants Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340858/1792069414193.png",
         "categoria": "Moda Praia",
         "preco": 64.90,
         "badge": "",
@@ -212,7 +212,7 @@
     },
     {
         "nome": "Calça Hot Pants Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340856/1792070519815.png",
         "categoria": "Moda Praia",
         "preco": 64.90,
         "badge": "",
@@ -222,7 +222,7 @@
     },
     {
         "nome": "Calça Hot Pants Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340858/1792072666410.png",
         "categoria": "Moda Praia",
         "preco": 72.90,
         "badge": "",
@@ -262,7 +262,7 @@
     },
     {
         "nome": "Calça La Vince Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340868/1792079902660-1.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -282,7 +282,7 @@
     },
     {
         "nome": "Calça La Vince Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340867/1792080491472.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -322,7 +322,7 @@
     },
     {
         "nome": "Calça Pala Franzida Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340858/1792096719136.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -352,7 +352,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340855/1792089083329.png",
         "categoria": "Moda Praia",
         "preco": 54.90,
         "badge": "",
@@ -362,7 +362,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340857/1792099044038.png",
         "categoria": "Moda Praia",
         "preco": 54.90,
         "badge": "",
@@ -372,7 +372,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340860/1792090847101.png",
         "categoria": "Moda Praia",
         "preco": 54.90,
         "badge": "",
@@ -382,7 +382,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340857/1792095062079.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -392,7 +392,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340852/d15d4f8b-f5e1-4e43-a416-51f2cc7a5d4d.jpg",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -402,7 +402,7 @@
     },
     {
         "nome": "Calça Pala Franzida Fio Duplo Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340859/1792097124353.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -482,7 +482,7 @@
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340856/1792100940250.png",
         "categoria": "Moda Praia",
         "preco": 49.90,
         "badge": "",
@@ -492,7 +492,7 @@
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792789339/1038149184-1.png",
         "categoria": "Moda Praia",
         "preco": 49.90,
         "badge": "",
@@ -502,7 +502,7 @@
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340860/1792103097107.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -512,7 +512,7 @@
     },
     {
         "nome": "Calça Regulagem Lateral 1,5 Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340854/1792103605591.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -522,7 +522,7 @@
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340867/1792104357201.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -532,7 +532,7 @@
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340864/1792104501871.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -542,7 +542,7 @@
     },
     {
         "nome": "Calça Stefany Simples Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340855/1792105578501.png",
         "categoria": "Moda Praia",
         "preco": 59.90,
         "badge": "",
@@ -562,7 +562,7 @@
     },
     {
         "nome": "Calça Stefany Simples Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340865/1792106003793.png",
         "categoria": "Moda Praia",
         "preco": 64.90,
         "badge": "",
@@ -602,7 +602,7 @@
     },
     {
         "nome": "Cortinão Base Duplo Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792789624/21991749-1.png",
         "categoria": "Moda Praia",
         "preco": 79.90,
         "badge": "",
@@ -612,7 +612,7 @@
     },
     {
         "nome": "Cortinão Base Duplo Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792789611/1930809128-1.png",
         "categoria": "Moda Praia",
         "preco": 79.90,
         "badge": "",
@@ -622,7 +622,7 @@
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340857/1792156850525.png",
         "categoria": "Moda Praia",
         "preco": 65.90,
         "badge": "",
@@ -632,7 +632,7 @@
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340864/1792156666374.png",
         "categoria": "Moda Praia",
         "preco": 65.90,
         "badge": "",
@@ -642,7 +642,7 @@
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340867/1792157099232.png",
         "categoria": "Moda Praia",
         "preco": 65.90,
         "badge": "",
@@ -652,7 +652,7 @@
     },
     {
         "nome": "Cortininha Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340865/1792157812158.png",
         "categoria": "Moda Praia",
         "preco": 65.90,
         "badge": "",
@@ -662,7 +662,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340863/1792154474810.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -672,7 +672,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340861/1792150172067.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -682,7 +682,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340860/1792150447568.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -692,7 +692,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340854/1792150710384-1.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -702,7 +702,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340862/1792155355198.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -712,7 +712,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340862/1792155523898.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -722,7 +722,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340871/1792155698044.png",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -732,7 +732,7 @@
     },
     {
         "nome": "Cortininha Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792789705/129014901-1.jpg",
         "categoria": "Moda Praia",
         "preco": 69.90,
         "badge": "",
@@ -742,7 +742,7 @@
     },
     {
         "nome": "Cropped Amarração Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340860/1792159172060.png",
         "categoria": "Moda Praia",
         "preco": 64.90,
         "badge": "",
@@ -752,7 +752,7 @@
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340864/1792163894037.png",
         "categoria": "Moda Praia",
         "preco": 89.90,
         "badge": "",
@@ -762,7 +762,7 @@
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340862/1792164235052.png",
         "categoria": "Moda Praia",
         "preco": 89.90,
         "badge": "",
@@ -772,7 +772,7 @@
     },
     {
         "nome": "Saia Hot Pants Estampado",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340864/1792163457672.png",
         "categoria": "Moda Praia",
         "preco": 89.90,
         "badge": "",
@@ -782,7 +782,7 @@
     },
     {
         "nome": "Short Praia Liso",
-        "imagem": "",
+        "imagem": "https://res.cloudinary.com/hdbbzn5y/image/upload/v1792340860/1792165243418.png",
         "categoria": "Moda Praia",
         "preco": 75.90,
         "badge": "",
@@ -820,6 +820,7 @@
         "tamanhos": [ "P ao GG", "48 e 50"],
         "precosPorTamanho": { "P ao GG": 61.90, "48 e 50": 69.90}
     },
+    /*Parei no Short Saida */
     {
         "nome": "Short Saída Liso",
         "imagem": "",
