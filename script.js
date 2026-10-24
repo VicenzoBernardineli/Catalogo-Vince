@@ -341,7 +341,7 @@
                     const v = prod.variantes[varianteAtivaIndex];
                     if (!v) return;
 
-                    const meuCelular = "5516981140049";
+                    const meuCelular = "55169999989999";
 
                     // 2. Monta o texto que vai ser enviado na mensagem
                     const mensagemTexto = "Olá! Gostaria de comprar o produto: " + prod.nomeBase +
