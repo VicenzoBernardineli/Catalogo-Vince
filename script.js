@@ -312,20 +312,60 @@
                 imgContainer.appendChild(btnNext);
                 const infoBloco = document.createElement("div");
                 infoBloco.classList.add("produto-info-bloco");
+
                 const titleElement = document.createElement("h3");
                 titleElement.classList.add("product-title-text");
+
                 const priceElement = document.createElement("div");
                 priceElement.classList.add("product-price");
+
                 const containerCores = document.createElement("div");
                 containerCores.classList.add("product-colors-container");
+
                 const tamanhosElement = document.createElement("div");
                 tamanhosElement.classList.add("product-attribute-text", "product-sizes-list");
+
+                // === NOVO: Criando o botão do WhatsApp com Ação Direta no Clique ===
+                // === NOVO: Criando o botão do WhatsApp com Geração Nativa de URL ===
+                const btnWhats = document.createElement("a");
+                btnWhats.classList.add("btn-comprar-whats");
+                btnWhats.textContent = "Comprar";
+                btnWhats.target = "_blank";
+                btnWhats.rel = "noopener noreferrer";
+                btnWhats.href = "#";
+
+                btnWhats.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+
+                    const v = prod.variantes[varianteAtivaIndex];
+                    if (!v) return;
+
+                    const meuCelular = "5516981140049";
+
+                    // 2. Monta o texto que vai ser enviado na mensagem
+                    const mensagemTexto = "Olá! Gostaria de comprar o produto: " + prod.nomeBase +
+                        " (Cor: " + (v.cores.join(", ") || "Padrão") +
+                        " / Tamanho: " + (v.tamanhos.join(" / ") || "Único") +
+                        ") no valor de " + formatarPreco(v.preco) + ".";
+
+                    // 3. Montagem Nativa da URL (Impede erros de escrita e endereços inválidos)
+                    const urlFormatada = new URL("https://wa.me/" + meuCelular.replace(/\D/g, ""));
+                    urlFormatada.searchParams.set("text", mensagemTexto);
+
+                    // 4. Força o navegador a abrir o endereço limpo e correto
+                    window.open(urlFormatada.toString(), "_blank", "noopener,noreferrer");
+                });
+
                 infoBloco.appendChild(titleElement);
                 infoBloco.appendChild(priceElement);
                 infoBloco.appendChild(containerCores);
                 infoBloco.appendChild(tamanhosElement);
+                infoBloco.appendChild(btnWhats);
+
                 card.appendChild(imgContainer);
                 card.appendChild(infoBloco);
+
 
                 function atualizarVisualCard() {
                     const v = prod.variantes[varianteAtivaIndex];
@@ -464,7 +504,7 @@
 
         function nextImagem() {
             if (modalProdutosLista.length === 0 || !imgExpanded) return;
-            
+
             // Limpa qualquer classe de animação ativa
             imgExpanded.className = "modal-content";
             void imgExpanded.offsetWidth; // Reseta a física de renderização do navegador
@@ -475,10 +515,10 @@
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % modalProdutosLista.length;
                 updateModalContent();
-                
+
                 // A nova folha entra se desdobrando a partir da esquerda
                 imgExpanded.className = "modal-content virar-esquerda-entrar";
-                
+
                 setTimeout(() => {
                     imgExpanded.className = "modal-content";
                 }, 450);
@@ -497,10 +537,10 @@
             setTimeout(() => {
                 currentIndex = (currentIndex - 1 + modalProdutosLista.length) % modalProdutosLista.length;
                 updateModalContent();
-                
+
                 // A folha anterior entra se desdobrando a partir da direita
                 imgExpanded.className = "modal-content virar-direita-entrar";
-                
+
                 setTimeout(() => {
                     imgExpanded.className = "modal-content";
                 }, 450);

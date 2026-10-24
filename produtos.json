@@ -820,7 +820,7 @@
         "tamanhos": [ "P ao GG", "48 e 50"],
         "precosPorTamanho": { "P ao GG": 61.90, "48 e 50": 69.90}
     },
-    /*Parei no Short Saida */
+
     {
         "nome": "Short Saída Liso",
         "imagem": "",

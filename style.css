@@ -1311,14 +1311,34 @@ body {
 }
 
 @keyframes livroEsquerdaSair {
-    0% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
-    30% { filter: drop-shadow(-10px 15px 30px rgba(0,0,0,0.2)); }
-    100% { transform: rotateY(-75deg) translateX(-100%) scale(0.9); opacity: 0; filter: drop-shadow(-20px 20px 40px rgba(0,0,0,0)); }
+    0% {
+        transform: rotateY(0deg) translateX(0) scale(1);
+        opacity: 1;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    30% {
+        filter: drop-shadow(-10px 15px 30px rgba(0, 0, 0, 0.2));
+    }
+
+    100% {
+        transform: rotateY(-75deg) translateX(-100%) scale(0.9);
+        opacity: 0;
+        filter: drop-shadow(-20px 20px 40px rgba(0, 0, 0, 0));
+    }
 }
 
 @keyframes livroEsquerdaEntrar {
-    0% { transform: rotateY(-75deg) translateX(-100%) scale(0.9); opacity: 0; }
-    100% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+    0% {
+        transform: rotateY(-75deg) translateX(-100%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateY(0deg) translateX(0) scale(1);
+        opacity: 1;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
 }
 
 /* --------------------------------------------------------------------------
@@ -1335,12 +1355,79 @@ body {
 }
 
 @keyframes livroDireitaSair {
-    0% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
-    30% { filter: drop-shadow(10px 15px 30px rgba(0,0,0,0.2)); }
-    100% { transform: rotateY(75deg) translateX(100%) scale(0.9); opacity: 0; filter: drop-shadow(20px 20px 40px rgba(0,0,0,0)); }
+    0% {
+        transform: rotateY(0deg) translateX(0) scale(1);
+        opacity: 1;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    30% {
+        filter: drop-shadow(10px 15px 30px rgba(0, 0, 0, 0.2));
+    }
+
+    100% {
+        transform: rotateY(75deg) translateX(100%) scale(0.9);
+        opacity: 0;
+        filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0));
+    }
 }
 
 @keyframes livroDireitaEntrar {
-    0% { transform: rotateY(75deg) translateX(100%) scale(0.9); opacity: 0; }
-    100% { transform: rotateY(0deg) translateX(0) scale(1); opacity: 1; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+    0% {
+        transform: rotateY(75deg) translateX(100%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateY(0deg) translateX(0) scale(1);
+        opacity: 1;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
+}
+
+/* ==========================================================================
+   Botão do WhatsApp "Comprar" Integrado ao Card
+   ========================================================================== */
+.btn-comprar-whats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-texto-escuro);
+    /* Segue o padrão estético dos CTAs principais */
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 14px;
+    transition: var(--transicao);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Hover sofisticado alterando para a cor primária Rosa Quartz */
+.btn-comprar-whats:hover {
+    background-color: var(--cor-primaria);
+    box-shadow: 0 6px 15px rgba(226, 154, 154, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Mantém as informações superiores do card compactas para dar destaque ao botão */
+.produto-info-bloco {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Ajuste fino para o layout de duas colunas em celulares */
+@media (max-width: 480px) {
+    .btn-comprar-whats {
+        font-size: 0.75rem;
+        padding: 8px 0;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
 }
