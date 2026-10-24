@@ -29,8 +29,8 @@
                 </svg>
             </button>
             <ul class="menu">
-                <li><a href="#" class="ativo">Início</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="#inicio" class="ativo">Início</a></li>
+                <li><a href="#catalogo-container">Produtos</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Moda Praia</a>
                     <ul class="submenu">
@@ -45,13 +45,53 @@
         </div>
     </header>
 
-    <!-- Banner Principal / Hero -->
-    <section class="hero-banner">
-        <div class="hero-conteudo">
-            <h1>Encontre seu look</h1>
-            <p>Produtos de alta qualidade desenvolvidos diretamente pela nossa fábrica. Confira o nosso catálogo
-                exclusivo!</p>
-            <a href="#catalogo-container" class="botao-cta">Explorar Catálogo</a>
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slides de Imagens -->
+            <div class="carousel-track">
+
+                <!-- Slide 1 (Seu texto original com a sua primeira foto de fundo) -->
+                <div class="carousel-slide ativo">
+                    <img src="https://res.cloudinary.com/hdbbzn5y/image/upload/v1792790392/14235214.png" alt="Confira nosso catálogo exclusivo">
+                    <div class="carousel-caption">
+                        <h1>Encontre seu look</h1>
+                        <p>Produtos de alta qualidade desenvolvidos diretamente pela nossa fábrica. Confira o nosso
+                            catálogo exclusivo!</p>
+                        <a href="#catalogo-container" class="botao-cta">Explorar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 (Próxima foto do carrossel) -->
+                <div class="carousel-slide">
+                    <img src="https://res.cloudinary.com/hdbbzn5y/image/upload/v1792790390/104812047-1.jpg" alt="Nova Coleção Vince">
+                    <div class="carousel-caption">
+                        <h1>Sinta-se Única</h1>
+                        <p>Peças exclusivas com o conforto e sofisticação que você merece.</p>
+                        <a href="#catalogo-container" class="botao-cta">Ver Novidades</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 (Terceira foto do carrossel) -->
+                <div class="carousel-slide">
+                    <img src="https://res.cloudinary.com/hdbbzn5y/image/upload/v1792790385/5183619-1.png" alt="Direto da Fábrica">
+                    <div class="carousel-caption">
+                        <h1>Direto da Fábrica</h1>
+                        <p>Lançamentos da semana com condições e preços especiais.</p>
+                        <a href="#catalogo-container" class="botao-cta">Confira Já</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Setas de Navegação Laterais -->
+            <button class="carousel-btn prev-btn" aria-label="Slide Anterior">&#10094;</button>
+            <button class="carousel-btn next-btn" aria-label="Próximo Slide">&#10095;</button>
+
+            <!-- Indicadores (Bolinhas de posição na parte inferior) -->
+            <div class="carousel-nav-dots">
+                <span class="dot ativa"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
     </section>
 

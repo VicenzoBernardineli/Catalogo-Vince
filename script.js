@@ -6,6 +6,139 @@
     document.addEventListener("DOMContentLoaded", () => {
 
         /* ==========================================================================
+           LOGICA DO BANNER CARROSSEL (COLOQUE AQUI)
+           ========================================================================== */
+        const inicializarBannerCarrossel = () => {
+            const slides = document.querySelectorAll(".carousel-slide");
+            const dots = document.querySelectorAll(".dot");
+            const prevBtn = document.querySelector(".prev-btn");
+            const nextBtn = document.querySelector(".next-btn");
+            const track = document.querySelector(".carousel-container");
+
+            if (!slides.length || !track) return;
+
+            let slideAtualIndex = 0;
+            let autoPlayTimer = null;
+
+            // Função centralizadora de mudança de estado visual
+            const mudarSlide = (novoIndex) => {
+                // Remove classes ativas dos elementos passados
+                slides[slideAtualIndex].classList.remove("ativo");
+                dots[slideAtualIndex].classList.remove("ativa");
+
+                // Atualiza o ponteiro de estado
+                slideAtualIndex = (novoIndex + slides.length) % slides.length;
+
+                // Aplica as classes no novo slide correspondente
+                slides[slideAtualIndex].classList.add("ativo");
+                dots[slideAtualIndex].classList.add("ativa");
+
+                reiniciarAutoPlay();
+            };
+
+            const proximoSlide = () => mudarSlide(slideAtualIndex + 1);
+            const slideAnterior = () => mudarSlide(slideAtualIndex - 1);
+
+            // Eventos de clique nos controles físicos (Setas e Bolinhas)
+            if (nextBtn) nextBtn.addEventListener("click", proximoSlide);
+            if (prevBtn) prevBtn.addEventListener("click", slideAnterior);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => mudarSlide(index));
+            });
+
+            // Rotação Automática (Muda a cada 5 segundos de forma autônoma)
+            const iniciarAutoPlay = () => {
+                autoPlayTimer = setInterval(proximoSlide, 5000);
+            };
+
+            const reiniciarAutoPlay = () => {
+                clearInterval(autoPlayTimer);
+                iniciarAutoPlay();
+            };
+
+            /* ==========================================================================
+               CONTROLE DE GESTOS (SWIPE) PARA DISPOSITIVOS MÓVEIS
+               ========================================================================== */
+            let toqueInicialX = 0;
+            let toqueInicialY = 0;
+
+            track.addEventListener("touchstart", (e) => {
+                if (e.touches && e.touches.length === 1) {
+                    toqueInicialX = e.touches[0].clientX;
+                    toqueInicialY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            track.addEventListener("touchend", (e) => {
+                if (e.changedTouches && e.changedTouches.length === 1) {
+                    const toqueFinalX = e.changedTouches[0].clientX;
+                    const toqueFinalY = e.changedTouches[0].clientY;
+
+                    const diferencaX = toqueInicialX - toqueFinalX;
+                    const diferencaY = toqueInicialY - toqueFinalY;
+
+                    // Sensibilidade mínima do arrasto (50px) e checa se o movimento foi majoritariamente horizontal
+                    if (Math.abs(diferencaX) > 50 && Math.abs(diferencaX) > Math.abs(diferencaY)) {
+                        if (diferencaX > 0) {
+                            // Arrasto da direita para a esquerda -> Avança o Slide
+                            proximoSlide();
+                        } else {
+                            // Arrasto da esquerda para a direita -> Volta o Slide
+                            slideAnterior();
+                        }
+                    }
+                }
+            }, { passive: true });
+
+            /* ==========================================================================
+            ROLAGEM SUAVE NATIVA VIA JAVASCRIPT PURO
+            ========================================================================== */
+            const botoesCTA = track.querySelectorAll(".botao-cta");
+            const menuFixoAltura = 80; // Altura aproximada em pixels do seu cabeçalho fixo
+
+            botoesCTA.forEach(botao => {
+                botao.addEventListener("click", (e) => {
+                    e.preventDefault(); // Impede o salto brusco padrão do link
+
+                    const idAlvo = botao.getAttribute("href");
+                    const elementoAlvo = document.querySelector(idAlvo);
+
+                    if (elementoAlvo) {
+                        // Calcula a posição do elemento descontando a altura do menu fixo
+                        const posicaoElemento = elementoAlvo.getBoundingClientRect().top + window.scrollY;
+                        const posicaoFinal = posicaoElemento - menuFixoAltura;
+
+                        // Executa a rolagem suave nativa do motor do navegador
+                        window.scrollTo({
+                            top: posicaoFinal,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // Dispara o fluxo inicial do temporizador
+            iniciarAutoPlay();
+
+            // Função nativa para calcular a altura real da janela (evita bugs de barra de rolagem no celular)
+            const atualizarAlturaBanner = () => {
+                const alturaReal = window.innerHeight;
+                document.documentElement.style.setProperty('--carousel-height', `${alturaReal}px`);
+            };
+
+            // Executa assim que abre
+            atualizarAlturaBanner();
+
+            // Re-calcula caso o usuário mude o celular deitado/em pé ou redimensione a tela do PC
+            window.addEventListener('resize', atualizarAlturaBanner);
+        };
+
+        // Chame a função dentro do seu fluxo de inicialização comum:
+        inicializarBannerCarrossel();
+
+
+        /* ==========================================================================
            2. Variáveis de Estado Totalmente Protegidas
            ========================================================================== */
         let produtosOriginais = [];
@@ -194,6 +327,8 @@
                 }
             });
         }
+
+
 
         /* ==========================================================================
            5. RENDERIZAÇÃO OTIMIZADA (FIM DOS LOOPS ANINHADOS E INSERÇÃO ÚNICA)
